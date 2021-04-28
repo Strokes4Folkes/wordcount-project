@@ -1,0 +1,41 @@
+<<title>About</title>
+<head>
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+body {
+  background-image: url('https://cdn.hipwallpaper.com/m/72/96/GgUuPr.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 style="color:white">Hello, This is a website designed to count<br/>your textand display it back to you</h1>
+
+<h2 style="color:white">It also shows how much a word has been used</h2>
+
+<h3 style="color:white">Pretty Neat huh?</h3>
+
+<a href="{% url 'home' %}" style="position:absolute; top:25px; right:250px">Home</a>
+
+<a href="{% url 'about' %}" style="position:absolute; top:25px; right:150px">About</a>
+
+<a href="{% url 'contact' %}" style="position:absolute; top:25px; right:40px">Contact</a>
+
+</body>

@@ -1,0 +1,50 @@
+<!-- The Heading, white and all"" -->
+<h1 style="color:white">Word Count</h1>
+
+<!-- ""Whats Displayed on the Tab"" -->
+<title>Home</title>
+
+
+<head>
+
+<!-- This is where the links of the pages are styled -->
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+
+body {
+  background-image: url('https://cdn.hipwallpaper.com/m/72/96/GgUuPr.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+</style>
+</head>
+
+<!-- This is where the links to each of the pages are -->
+<a href="{% url 'home' %}" style="position:absolute; top:25px; right:250px">Home</a>
+
+<a href="{% url 'about' %}" style="position:absolute; top:25px; right:150px">About</a>
+
+<a href="{% url 'contact' %}" style="position:absolute; top:25px; right:40px">Contact</a>
+
+
+<!-- This si where the counting form is introduced -->
+<form action="{% url 'count' %}">
+  <textarea cols="40" rows="10" name="fulltext"></textarea>
+  <br></br>
+  <input type="submit" value="Count!" />
+
+</form>

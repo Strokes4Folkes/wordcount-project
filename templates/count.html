@@ -1,0 +1,47 @@
+<h1>There are {{ count }} words in your list</h1>
+<<title>All Done!</title>
+<head>
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+body {
+  background-image: url('https://cdn.dribbble.com/users/1003612/screenshots/5018804/done-wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+</style>
+</head>
+
+
+
+<a href="{% url 'home' %}">Start Again?</a>
+
+<h1>Your Text:</h1>
+{{ fulltext }}
+
+<h1>Word Count</h1>
+{% for word, counttotal in sortedwords %}
+
+{{ word }} - {{ counttotal}}
+<br/>
+
+
+{% endfor %}
+<a href="{% url 'home' %}" style="position:absolute; top:25px; right:250px">Home</a>
+
+<a href="{% url 'about' %}" style="position:absolute; top:25px; right:150px">About</a>
+
+<a href="{% url 'contact' %}" style="position:absolute; top:25px; right:40px">Contact</a>
